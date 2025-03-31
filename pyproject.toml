@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "mi-fastapi-proyecto"
+version = "1.0.0"
+description = "Proyecto FastAPI con configuración moderna"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.109.2"
+uvicorn = "^0.27.1"
+python-dotenv = "^1.0.1"
+pydantic-settings = "^2.1.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^8.0.0"
+black = "^24.1.1"
+flake8 = "^7.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3 
